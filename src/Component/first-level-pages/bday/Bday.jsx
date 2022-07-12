@@ -3,6 +3,7 @@ import Row from "../../UI/Row/Row"
 const Bday = () => {
     return (
         <div className="App">
+            {/* <Outlet /> */}
             <div className='title'>
                 Almaty Guideliance - Where to have a Birthday Party
             </div>

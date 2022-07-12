@@ -26,20 +26,37 @@ root.render(
         <Route path='nikulin' element={<Nikulin />} />
         <Route path='latenight' element={<LateNight />} />
       </Route>
+
       <Route path='cafe' element={<Cafe />} >
-
+        <Route path='coffeeboom' element={<Kowloon />} />
+        <Route path='ziyafet' element={<Nikulin />} />
+        <Route path='afanasich' element={<LateNight />} />
       </Route>
+
       <Route path='bday' element={<Bday />} >
-
+        <Route path='rybamechty' element={<Kowloon />} />
+        <Route path='sadu' element={<Nikulin />} />
+        <Route path='manana' element={<LateNight />} />
       </Route>
+
       <Route path='resort' element={<Resort />} >
-
+        <Route path='tauspa' element={<Kowloon />} />
+        <Route path='eightlakes' element={<Nikulin />} />
+        <Route path='office' element={<LateNight />} />
       </Route>
-      <Route path='study' element={<Study />} />
+
+      <Route path='study' element={<Study />} >
+        <Route path='smartpoint' element={<Kowloon />} />
+        <Route path='level8' element={<Nikulin />} />
+        <Route path='terra' element={<LateNight />} />
+      </Route>
 
       <Route path='engclubs' element={<EngClubs />} >
-
+        <Route path='americanspace' element={<Kowloon />} />
+        <Route path='spasibeacoup' element={<Nikulin />} />
+        <Route path='skillsacademy' element={<LateNight />} />
       </Route>
+
     </Routes>
 
   </BrowserRouter >

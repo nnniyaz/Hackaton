@@ -3,6 +3,7 @@ import Row from "../../UI/Row/Row";
 const EngClubs = () => {
     return (
         <div className="App">
+            {/* <Outlet /> */}
             <div className='title'>
                 Almaty Guideliance - Where to Practice English
             </div>

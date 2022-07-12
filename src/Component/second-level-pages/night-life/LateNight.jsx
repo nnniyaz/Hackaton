@@ -1,7 +1,6 @@
 const LateNight = () => {
     return (
-        <div>
-            Late Night
+        <div className="App">
         </div>
     );
 }

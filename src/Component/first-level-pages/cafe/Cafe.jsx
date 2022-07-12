@@ -3,6 +3,7 @@ import Row from "../../UI/Row/Row";
 const Cafe = () => {
     return (
         <div className="App">
+            {/* <Outlet /> */}
             <div className='title'>
                 Almaty Guideliance - Where to Eat
             </div>
