@@ -3,12 +3,16 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import App from './App';
 
-import NightLife from './Component/nightlife/NightLife'
-import Cafe from './Component/cafe/Cafe'
-import Bday from './Component/bday/Bday'
-import Resort from './Component/resort/Resort'
-import Study from './Component/study/Study'
-import EngClubs from './Component/engclubs/EngClubs'
+import NightLife from './Component/first-level-pages/nightlife/NightLife'
+import Cafe from './Component/first-level-pages/cafe/Cafe'
+import Bday from './Component/first-level-pages/bday/Bday'
+import Resort from './Component/first-level-pages/resort/Resort'
+import Study from './Component/first-level-pages/study/Study'
+import EngClubs from './Component/first-level-pages/engclubs/EngClubs'
+
+import Kowloon from './Component/second-level-pages/night-life/Kowloon'
+import Nikulin from './Component/second-level-pages/night-life/Nikulin';
+import LateNight from './Component/second-level-pages/night-life/LateNight';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -17,15 +21,28 @@ root.render(
     <Routes>
       <Route path='/' element={<App />} />
 
-      <Route path='nightlife' element={<NightLife />} />
-      <Route path='cafe' element={<Cafe />} />
-      <Route path='bday' element={<Bday />} />
-      <Route path='resort' element={<Resort />} />
+      <Route path='nightlife' element={<NightLife />}>
+        <Route path='kowloon' element={<Kowloon />} />
+        <Route path='nikulin' element={<Nikulin />} />
+        <Route path='latenight' element={<LateNight />} />
+      </Route>
+      <Route path='cafe' element={<Cafe />} >
+
+      </Route>
+      <Route path='bday' element={<Bday />} >
+
+      </Route>
+      <Route path='resort' element={<Resort />} >
+
+      </Route>
       <Route path='study' element={<Study />} />
-      <Route path='engclubs' element={<EngClubs />} />
+
+      <Route path='engclubs' element={<EngClubs />} >
+
+      </Route>
     </Routes>
 
-  </BrowserRouter>
+  </BrowserRouter >
 );
 
 // If you want to start measuring performance in your app, pass a function
