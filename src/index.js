@@ -21,11 +21,10 @@ root.render(
     <Routes>
       <Route path='/' element={<App />} />
 
-      <Route path='nightlife' element={<NightLife />}>
-        <Route path='kowloon' element={<Kowloon />} />
-        <Route path='nikulin' element={<Nikulin />} />
-        <Route path='latenight' element={<LateNight />} />
-      </Route>
+      <Route path='nightlife' element={<NightLife />} />
+      <Route path='nightlife/kowloon' element={<Kowloon />} />
+      <Route path='nightlife/nikulin' element={<Nikulin />} />
+      <Route path='nightlife/latenight' element={<LateNight />} />
 
       <Route path='cafe' element={<Cafe />} >
         <Route path='coffeeboom' element={<Kowloon />} />
