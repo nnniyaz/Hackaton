@@ -3,8 +3,7 @@ import './App.css';
 
 import Cell from './Component/UI/Cell/Cell';
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import NightLife from './pages/NightLife';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 
 
@@ -17,28 +16,16 @@ function App() {
 
       <div className='table'>
         <div className='row'>
-          <Cell name="nightlife">Night Life</Cell>
-          <Cell name="cafe">Where to eat</Cell>
-          <Cell name="bday">Places for BDay</Cell>
+          <Link className='link' to="nightlife"><Cell name="nightlife">Night Life</Cell></Link>
+          <Link className='link' to="cafe"><Cell name="cafe">Where to eat</Cell></Link>
+          <Link className='link' to="bday"><Cell name="bday">Places for BDay</Cell></Link>
         </div>
         <div className='row'>
-          <Cell name="resort">Resorts</Cell>
-          <Cell name="library">Study</Cell>
-          <Cell name="britain">English Clubs</Cell>
+          <Link className='link' to="resort"><Cell name="resort">Resorts</Cell></Link>
+          <Link className='link' to="study"><Cell name="library">Study</Cell></Link>
+          <Link className='link' to="engclubs"><Cell name="britain">English Clubs</Cell></Link>
         </div>
       </div>
-
-      {/* <Router>
-        <Routes>
-          <Route ><Cell name="nightlife">Night Life</Cell></Route>
-        </Routes>
-      </Router> */}
-
-      {/* <Router>
-        <Routes>
-          <Route exact path='/nightlife' element={<NightLife />} />
-        </Routes>
-      </Router> */}
     </div >
   );
 }
