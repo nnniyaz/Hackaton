@@ -1,12 +1,12 @@
+import React from 'react';
 import './App.css';
 
-// Images
-import nightLife from './images/party.jpeg'
-import cafe from './images/cafe.jpeg'
-import bday from './images/bday.webp'
-import resort from './images/pool.jpeg'
-import library from './images/library.jpeg'
-import britain from './images/uk.webp'
+import Cell from './Component/UI/Cell/Cell';
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NightLife from './pages/NightLife';
+
+
 
 function App() {
   return (
@@ -17,28 +17,28 @@ function App() {
 
       <div className='table'>
         <div className='row'>
-          <div className='cell' style={{ backgroundImage: `url(${nightLife})` }}>
-            <div className='subsell'>Night Life</div>
-          </div>
-          <div className='cell' style={{ backgroundImage: `url(${cafe})` }}>
-            <div className='subsell'>Where to eat</div>
-          </div>
-          <div className='cell' style={{ backgroundImage: `url(${bday})` }}>
-            <div className='subsell' style={{ fontSize: '28px' }}>Places for BDay</div>
-          </div>
+          <Cell name="nightlife">Night Life</Cell>
+          <Cell name="cafe">Where to eat</Cell>
+          <Cell name="bday">Places for BDay</Cell>
         </div>
         <div className='row'>
-          <div className='cell' style={{ backgroundImage: `url(${resort})` }}>
-            <div className='subsell'>Resorts</div>
-          </div>
-          <div className='cell' style={{ backgroundImage: `url(${library})` }}>
-            <div className='subsell' style={{ textAlign: 'center' }}>Libraries Coworkings</div>
-          </div>
-          <div className='cell' style={{ backgroundImage: `url(${britain})` }}>
-            <div className='subsell'>English Clubs</div>
-          </div>
+          <Cell name="resort">Resorts</Cell>
+          <Cell name="library">Study</Cell>
+          <Cell name="britain">English Clubs</Cell>
         </div>
       </div>
+
+      {/* <Router>
+        <Routes>
+          <Route ><Cell name="nightlife">Night Life</Cell></Route>
+        </Routes>
+      </Router> */}
+
+      {/* <Router>
+        <Routes>
+          <Route exact path='/nightlife' element={<NightLife />} />
+        </Routes>
+      </Router> */}
     </div >
   );
 }
