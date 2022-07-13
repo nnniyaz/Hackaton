@@ -2,3 +2,10 @@
     display: flex;
     justify-content: center;
 }
+
+@media screen and (max-width: 919px) {
+    .row {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
