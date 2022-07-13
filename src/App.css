@@ -49,3 +49,26 @@
 .link {
     text-decoration: none;
 }
+
+@media screen and (max-width: 919px) {
+    .App {
+        position: fixed;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .table {
+        height: 100%;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 0;
+    }
+
+    .row {
+        height: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
